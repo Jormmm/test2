@@ -510,41 +510,41 @@ html {
 }
 
 .form-number::-webkit-input-placeholder {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
-  background: url(../img/phone.svg) center right no-repeat;
+  background: url(../img/phone-p.svg) top right no-repeat;
   max-width: 470px;
   color: #EDE6E6;
 }
 
 .form-number::-moz-placeholder {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
-  background: url(../img/phone.svg) center right no-repeat;
+  background: url(../img/phone-p.svg) top right no-repeat;
   max-width: 470px;
   color: #EDE6E6;
 }
 
 .form-number:-ms-input-placeholder {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
-  background: url(../img/phone.svg) center right no-repeat;
+  background: url(../img/phone-p.svg) top right no-repeat;
   max-width: 470px;
   color: #EDE6E6;
 }
 
 .form-number::-ms-input-placeholder {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
-  background: url(../img/phone.svg) center right no-repeat;
+  background: url(../img/phone-p.svg) top right no-repeat;
   max-width: 470px;
   color: #EDE6E6;
 }
 
 .form-number::placeholder {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
-  background: url(../img/phone.svg) center right no-repeat;
+  background: url(../img/phone-p.svg) top right no-repeat;
   max-width: 470px;
   color: #EDE6E6;
 }
@@ -873,93 +873,93 @@ html {
   .form-name {
     width: 153px;
     height: 39px;
-    font-size: 11px;
+    font-size: 15px;
   }
 
   .form-name::-webkit-input-placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 125px;
   }
 
   .form-name::-moz-placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 125px;
   }
 
   .form-name:-ms-input-placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 125px;
   }
 
   .form-name::-ms-input-placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 125px;
   }
 
   .form-name::placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 125px;
   }
 
   .form-email {
     width: 153px;
     height: 39px;
-    font-size: 11px;
+    font-size: 15px;
   }
 
   .form-email::-webkit-input-placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 125px;
   }
 
   .form-email::-moz-placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 125px;
   }
 
   .form-email:-ms-input-placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 125px;
   }
 
   .form-email::-ms-input-placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 125px;
   }
 
   .form-email::placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 125px;
   }
 
   .form-number {
     max-width: 330px;
     height: 39px;
-    font-size: 11px;
+    font-size: 15px;
   }
 
   .form-number::-webkit-input-placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 302px;
   }
 
   .form-number::-moz-placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 302px;
   }
 
   .form-number:-ms-input-placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 302px;
   }
 
   .form-number::-ms-input-placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 302px;
   }
 
   .form-number::placeholder {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 302px;
   }
 
@@ -1041,8 +1041,18 @@ html {
             justify-content: center;
   }
 
+  .form__button-submit {
+    width: 300px;
+  }
+
+  .form__button-download::after {
+    top: 12px;
+    right: 15px;
+  }
+
   .form__button-download {
-    width: 150px;
+    width: 300px;
+    text-align: center;
   }
 
   .form-name {
