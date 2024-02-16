@@ -241,6 +241,10 @@ html {
 
 .hero__title {
   font-size: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 10px;
   text-wrap: nowrap;
   font-weight: 700;
   line-height: 76px;
@@ -785,7 +789,7 @@ html {
   .hero__title {
     font-size: 38px;
     line-height: 44px;
-    width: 320px;
+    width: 340px;
   }
 
   .hero__smaler-text {
@@ -852,12 +856,12 @@ html {
   }
 
   .form__button-download {
-    padding: 0 0 0 7px;
+    padding: 0 0 0 4px;
   }
 
   .form__button-download::after {
     top: 12px;
-    right: 2px;
+    right: 5px;
   }
 
   .form__button-download {
@@ -1011,7 +1015,7 @@ html {
 
   .hero__title {
     font-size: 34px;
-    width: 270px;
+    width: 297px;
   }
 
   .hero__smaler-text {
@@ -1123,6 +1127,7 @@ html {
 @media (max-width: 350px) {
   .hero__title {
     font-size: 30px;
+    width: 270px;
   }
 
   .hero__smaler-text {
