@@ -590,7 +590,7 @@ html {
 .blur-line {
   position: absolute;
   left: 0;
-  bottom: -14px;
+  bottom: -17px;
   width: 100%;
   background-color: #21232F;
   height: 30px;
@@ -669,6 +669,10 @@ html {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.number-box__item {
+  min-width: 267px;
 }
 
 .number-box__bigtext {
@@ -759,7 +763,7 @@ html {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    z-index: 2;
+    z-index: 3;
     -webkit-animation: fade 0.1s linear;
             animation: fade 0.1s linear;
   }
@@ -873,7 +877,7 @@ html {
 
 @media (max-width: 1449.98px) {
   .container {
-    max-width: 1400px;
+    max-width: 1440px;
   }
 }
 
@@ -1136,7 +1140,7 @@ html {
   }
 
   .traits__wrapper {
-    padding: 50px 0;
+    padding: 0 0 50px 0;
   }
 
   .box-item {
@@ -1259,7 +1263,7 @@ html {
 
 @media (max-width: 375px) {
   .logo {
-    z-index: 3;
+    z-index: 4;
   }
 
   .hero__title {
