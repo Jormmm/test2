@@ -279,7 +279,7 @@ html {
 .hero__with-form {
   max-width: 688px;
   background-color: #21232F;
-  padding: 116px 120px 1px 110px;
+  padding: 116px 120px 0px 110px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -947,7 +947,7 @@ html {
   }
 
   .hero__with-form {
-    padding: 26px 10px 1px 10px;
+    padding: 26px 10px 0px 10px;
     font-size: 14px;
     -webkit-box-align: center;
         -ms-flex-align: center;
