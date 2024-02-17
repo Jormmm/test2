@@ -117,7 +117,7 @@ html {
   position: fixed;
   width: 100%;
   background-color: transparent;
-  z-index: 2;
+  z-index: 3;
 }
 
 .header.fixed {
@@ -125,7 +125,7 @@ html {
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 
 .navbar {
