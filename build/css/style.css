@@ -1054,6 +1054,7 @@ html {
 
   .tabs__picture {
     max-width: 100%;
+    padding: 5px 5px;
   }
 
   .tabs__content {
@@ -1062,6 +1063,7 @@ html {
 
   .big-picture {
     border-radius: 20px 20px 0 0;
+    padding: 5px;
   }
 
   .big-picture__img {
@@ -1078,7 +1080,7 @@ html {
   }
 
   .specifications__item ::after {
-    bottom: 7px;
+    bottom: 5px;
   }
 
   .specifications__item:nth-child(1) {
