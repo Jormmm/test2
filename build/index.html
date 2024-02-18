@@ -23,16 +23,16 @@
         <nav>
           <ul class="menu">
             <li class="menu__item">
-              <a href="#" class="menu__item-link" data-scroll>Про FachwerkLviv</a>
+              <a href="#notion" class="menu__item-link" data-scroll>Про FachwerkLviv</a>
             </li>
             <li class="menu__item">
               <a href="#" class="menu__item-link" data-scroll>Скачати загальний каталог</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__item-link" data-scroll>зв’язатися з нами</a>
+              <a href="#connection" class="menu__item-link" data-scroll>зв’язатися з нами</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__item-link" data-scroll>проєкти</a>
+              <a href="#buildings" class="menu__item-link" data-scroll>проєкти</a>
             </li>
           </ul>
         </nav>
@@ -59,7 +59,7 @@
                   <img src="img/aframe-img.png" alt="building-Aframe" class="hero__img">
                 </div>
               </div>
-              <div class="hero__with-form">
+              <div class="hero__with-form" id="heroform">
                 <p class="hero__slogan">Ми не просто будуємо будинки - ми втілюємо мрії в реальність.</p>
                 <p class="hero__text-slogan">Оберіть свій будинок разом із FachwerkLviv.</p>
                 <div class="hero__form-wrapper form">
@@ -79,7 +79,7 @@
                   </div>
                   <div class="form__items">
                     <button class="form__button-submit" type="submit">Консультація</button>
-                    <button class="form__button-download">Скачати презентацію</button>
+                    <button class="form__button-download" onclick="location.href='#'" >Скачати презентацію</button>
                   </div>
                 </div>
                 <div class="hero__values value-items">
@@ -102,7 +102,7 @@
             </div>
           </div>
         </section>
-        <section class="notion">
+        <section class="notion" id="notion">
           <div class="container">
             <div class="notion__wrapper">
               <h2 class="notion__title">Робота FachwerkLviv базується на кількох ключових принципах:</h2>
@@ -140,7 +140,7 @@
             </div>
           </div>
         </section>
-        <section class="traits">
+        <section class="traits" id="traits">
           <div class="container">
             <div class="traits__wrapper">
               <div class="traits__box box-item">
@@ -179,26 +179,26 @@
             </div>
           </div>
         </section>
-        <section class="buildings">
+        <section class="buildings" id="buildings">
           <div class="container">
             <div class="tabs">
               <div class="big-picture">
-                <img src="img/Big-photo.png" alt="bigbuildphoto" class="big-picture__img">
+                <img src="img/3Dbigi.png" alt="bigbuildphoto" class="big-picture__img">
               </div>
               <div class="tabs__header">
                   <div class="tabs__header-item">
                     <div class="tabs__picture-block">
-                      <img src="img/home-sss.png" alt="home" class="tabs__picture activate">
+                      <img src="img/3dbuttonhouse.png" alt="home" class="tabs__picture activate">
                     </div>
                   </div>
                   <div class="tabs__header-item">
                     <div class="tabs__picture-block">
-                      <img src="img/home-mmm.png" alt="home" class="tabs__picture">
+                      <img src="img/houseM.png" alt="home" class="tabs__picture">
                     </div>
                   </div>
                   <div class="tabs__header-item">
                     <div class="tabs__picture-block">
-                      <img src="img/home-l.png" alt="home" class="tabs__picture">
+                      <img src="img/HouseL.png" alt="home" class="tabs__picture">
                     </div>
                   </div>
               </div>
@@ -237,10 +237,80 @@
           </div>
           </div>
         </section>
+        <section class="connection" id="connection">
+          <div class="container">
+            <div class="connection__wrapper">
+              <div class="connection__form connection-form">
+                  <h3 class="connection-form__title">Маєте запитання? Поділіться з нами - будемо раді допомогти!</h3>
+                  <div class="connection-form__items">
+                    <div class="connection-form__group">
+                      <input type="text" name="name" placeholder="Ім’я" id="connection-name" class="connection-form-name" required="">
+                    </div>
+                  </div>
+                  <div class="connection-form__items">
+                    <div class="connection-form__group">
+                      <input type="tel" name="phone" maxlength="18" placeholder="Номер телефону" id="connection-tel" class="connection-form-number" required="">
+                    </div>
+                  </div>
+                  <div class="connection-form__items">
+                    <button class="connection-form__button-submit"  type="submit">Надіслати</button>
+                  </div>
+              </div>
+              <div class="connection__image-box">
+                <img src="img/roundhouse.png" alt="house-in-a-round" class="connection__image">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="map" id="map">
+          <div class="container">
+            <div class="map__wrapper">
+              <h2 class="map__title">Контакти</h2>
+              <div class="map__card">
+                <h3 class="map__name">FachwerkLviv</h3>
+                <p class="map__text">проєктування будинків</p>
+                <ul class="map__adress">
+                  <li class="map__items">с.Наварія, Львівський район, Львівська область, 81105</li>
+                  <li class="map__items">fachwerklviv@gmail.com</li>
+                  <li class="map__items">(096) 4620112</li>
+                </ul>
+                <div class="map__itembutton">
+                  <button class="map__button" onclick="location.href='#heroform'" >Замовити дзвінок</button>
+                </div>
+              </div>
+              <div class="map__position">
+                <img src="img/maps2.png" alt="map" class="position-image">
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
     <!-- Footer -->
-    
+    <footer>
+    <div class="container container-color">
+        <div class="footer">
+            <div class="footer__contact">
+                <h2 class="footer__title">Зв`язок</h2>
+                <ul class="footer__items">
+                    <li class="footer__item"><a class="footer__link" href="#"> с.Наварія, Львівський район, Львівська область, 81105</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#"> (096) 4620112 </a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">fachwerklviv@gmail.com </a></li>
+                </ul>
+            </div>
+            <div class="footer__nav">
+                <h2 class="footer__title">Навігація</h2>
+                <ul class="footer__items">
+                    <li class="footer__item"><a class="footer__link" href="#notion"> Про FachwerkLviv </a></li>
+                    <li class="footer__item"><a class="footer__link" href="#"> Скачати загальний каталог</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#connection"> Зв’язатися з нами </a></li>
+                    <li class="footer__item"><a class="footer__link" href="#buildings"> Проєкти </a></li>
+                </ul>
+            </div>
+            <a href="" class="top-arrow"></a>
+        </div>
+    </div>
+</footer>
   </body>
 
   <script src="./js/scripts.min.js"></script>
