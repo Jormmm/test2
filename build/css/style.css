@@ -1014,6 +1014,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 0 5px 0;
 }
 
 .connection-form__group {
@@ -1070,22 +1071,27 @@ html {
 
 .connection-form-name::-webkit-input-placeholder {
   font-size: 16px;
+  outline: 0;
 }
 
 .connection-form-name::-moz-placeholder {
   font-size: 16px;
+  outline: 0;
 }
 
 .connection-form-name:-ms-input-placeholder {
   font-size: 16px;
+  outline: 0;
 }
 
 .connection-form-name::-ms-input-placeholder {
   font-size: 16px;
+  outline: 0;
 }
 
 .connection-form-name::placeholder {
   font-size: 16px;
+  outline: 0;
 }
 
 .connection-form-number::-webkit-input-placeholder {
@@ -1106,6 +1112,26 @@ html {
 
 .connection-form-number::placeholder {
   font-size: 16px;
+}
+
+.connection-form-name:active {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.connection-form-number:active {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.connection-form-name:hover {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.connection-form-number:hover {
+  outline: 0;
+  outline-offset: 0;
 }
 
 .map {
