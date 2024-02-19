@@ -1228,6 +1228,7 @@ html {
 .map__items {
   padding: 0 0 0 28px;
   margin: 0 0 13px 0px;
+  text-decoration: none;
   font-size: 12px;
   line-height: 18px;
   font-weight: 600;
