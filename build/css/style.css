@@ -216,6 +216,10 @@ html {
   z-index: 3;
 }
 
+h1 {
+  display: none;
+}
+
 .hero-container {
   padding: 0;
   overflow: hidden;
@@ -1163,7 +1167,7 @@ html {
 .map__title::after {
   position: absolute;
   content: "";
-  background-color: #541894;
+  background-color: #1C90F5;
   height: 2px;
   width: 180px;
   bottom: 0;
