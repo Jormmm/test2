@@ -10,6 +10,9 @@
     <meta property="og:url" content=" ">
     <meta property="og:type" content="website">
     <meta name="keywords" content="будинок, a-frame, проєктування">
+
+    <meta name="description" content="Проєктування будинків A-FRAME">
+    
     <title>FACHWERKLVIV - будинки A-FRAME</title>
     <link rel="icon" href="img/favico.ico">
     <link rel="stylesheet" href="./css/style.min.css">
@@ -70,26 +73,26 @@
               <div class="hero__with-form" id="heroform">
                 <p class="hero__slogan">Ми не просто будуємо будинки - ми втілюємо мрії в реальність.</p>
                 <p class="hero__text-slogan">Оберіть свій будинок разом із FachwerkLviv.</p>
-                <div class="hero__form-wrapper form">
+                <form class="hero__form-wrapper form" id="hero-form">
                   <h3 class="form__title">Залиште заявку і ми обовʼязково допоможемо Вам!</h3>
                   <div class="form__items">
                     <div class="form__group">
-                      <input type="text" name="name" placeholder="Ім’я" id="name" class="form-name" required="">
+                      <input type="text" name="name" maxlength="20" placeholder="Ім’я" id="name" class="form-name" required autocomplete="off">
                     </div>
                     <div class="form__group">
-                      <input type="email" name="email" placeholder="Пошта" id="email" class="form-email" required="">
+                      <input type="email" name="email" maxlength="40" placeholder="Пошта" id="email" class="form-email" required>
                     </div>
                   </div>
                   <div class="form__items">
                     <div class="form__group">
-                      <input type="tel" name="phone" maxlength="18" placeholder="+ 38 (---)  --- -- --" id="tel" class="form-number" required="">
+                      <input type="tel" name="phone" maxlength="16" placeholder="+ 38 (---)  --- -- --" id="tel" class="form-number" required>
                     </div>
                   </div>
                   <div class="form__items">
                     <button class="form__button-submit" type="submit">Консультація</button>
                     <button class="form__button-download" onclick="location.href='#'" >Скачати презентацію</button>
                   </div>
-                </div>
+                </form>
                 <div class="hero__values value-items">
                   <div class="value-items__item">
                     <div class="value-items__big-text">
@@ -248,22 +251,22 @@
         <section class="connection" id="connection">
           <div class="container">
             <div class="connection__wrapper">
-              <div class="connection__form connection-form">
+              <form class="connection__form connection-form">
                   <h3 class="connection-form__title">Маєте запитання? Поділіться з нами - будемо раді допомогти!</h3>
                   <div class="connection-form__items">
                     <div class="connection-form__group">
-                      <input type="text" name="name" placeholder="Ім’я" id="connection-name" class="connection-form-name" required="">
+                      <input type="text" name="name" maxlength="20" placeholder="Ім’я" id="connection-name" class="connection-form-name" required autocomplete="off">
                     </div>
                   </div>
                   <div class="connection-form__items">
                     <div class="connection-form__group">
-                      <input type="tel" name="phone" maxlength="18" placeholder="Номер телефону" id="connection-tel" class="connection-form-number" required="">
+                      <input type="tel" name="phone" maxlength="16" placeholder="Номер телефону" id="connection-tel" class="connection-form-number" required>
                     </div>
                   </div>
                   <div class="connection-form__items">
                     <button class="connection-form__button-submit"  type="submit">Надіслати</button>
                   </div>
-              </div>
+              </form>
               <div class="connection__image-box">
                 <img src="img/roundhouse.png" alt="house-in-a-round" class="connection__image">
               </div>
@@ -318,6 +321,7 @@
         </div>
     </div>
 </footer>
+    <script src="https://unpkg.com/imask"></script>
     <script src="./js/scripts.min.js"></script>
   </body>
 
