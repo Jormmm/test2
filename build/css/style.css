@@ -1012,7 +1012,7 @@ h1 {
   max-width: 250px;
   position: absolute;
   top: -14px;
-  left: -8px;
+  left: -8.5px;
   -webkit-animation: rotate 30s linear infinite;
           animation: rotate 30s linear infinite;
 }
