@@ -27,7 +27,7 @@
       <div class="navbar">
         <div class="logo">
           <a href="#">
-            <img src="../img/logo.svg" alt="logo">
+            <img class="header__logo" src="../img/logo.svg" alt="logo">
           </a>
         </div>
         <nav>
@@ -36,7 +36,7 @@
               <a href="#notion" class="menu__item-link" data-scroll>Про FachwerkLviv</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__item-link" data-scroll>Скачати загальний каталог</a>
+              <a href="#" class="menu__item-link" data-scroll>Скачати презентацію</a>
             </li>
             <li class="menu__item">
               <a href="#connection" class="menu__item-link" data-scroll>зв’язатися з нами</a>
@@ -65,7 +65,7 @@
               <div class="hero__basik">
                 <h1 class="titlename">A-FRAME швидкічть, надійність та комфорт.</h1>
                 <h2 class="hero__title"> <span class="hero__smaler-text">Будинок</span> A-frame </h2>
-                <h3 class="hero__subtitle">-це про надійність та простоту</h3>
+                <p class="hero__subtitle">-це про надійність та простоту</p>
                 <div class="hero__picture">
                   <img src="img/aframe-img.png" alt="building-Aframe" class="hero__img">
                 </div>
@@ -90,23 +90,22 @@
                   </div>
                   <div class="form__items">
                     <button class="form__button-submit" type="submit">Консультація</button>
-                    <button class="form__button-download" onclick="location.href='#'" >Скачати презентацію</button>
                   </div>
                 </form>
+                <button class="form__button-download" onclick="location.href='#'" >Скачати презентацію</button>
                 <div class="hero__values value-items">
                   <div class="value-items__item">
                     <div class="value-items__big-text">
-                      <span class="big-number">25</span>
-                      років
+                      <span class="big-number">700+</span>
                     </div>
-                    <div class="value-items__small-text market-transform">на ринку</div>
+                    <div class="value-items__small-text market-transform">задоволених клієнтів</div>
                   </div>
                   <div class="value-items__item">
-                    <div class="value-items__big-text">
+                    <!-- <div class="value-items__big-text">
                       <span class="big-number">5</span>
                       тисяч
                     </div>
-                    <div class="value-items__small-text">успішних проєктів</div>
+                    <div class="value-items__small-text">успішних проєктів</div> -->
                   </div>
                 </div>
               </div>
@@ -136,16 +135,16 @@
               </div>
               <div class="notion__numbers number-box">
                 <div class="number-box__item">
-                  <div class="number-box__bigtext">5000 +</div>
-                  <div class="number-box__smalltext">клієнтів</div>
-                </div>
-                <div class="number-box__item">
-                  <div class="number-box__bigtext">25 +</div>
+                  <div class="number-box__bigtext">5 +</div>
                   <div class="number-box__smalltext">років</div>
                 </div>
                 <div class="number-box__item">
-                  <div class="number-box__bigtext">11000 +</div>
+                  <div class="number-box__bigtext">56 +</div>
                   <div class="number-box__smalltext">будинків</div>
+                </div>
+                <div class="number-box__item">
+                  <div class="number-box__bigtext">700 +</div>
+                  <div class="number-box__smalltext">клієнтів</div>
                 </div>
               </div>
             </div>
@@ -251,22 +250,27 @@
         <section class="connection" id="connection">
           <div class="container">
             <div class="connection__wrapper">
-              <form class="connection__form connection-form">
-                  <h3 class="connection-form__title">Маєте запитання? Поділіться з нами - будемо раді допомогти!</h3>
-                  <div class="connection-form__items">
-                    <div class="connection-form__group">
-                      <input type="text" name="name" maxlength="20" placeholder="Ім’я" id="connection-name" class="connection-form-name" required autocomplete="off">
+              <div class="connection__form-background">
+                <form class="connection__form-wrapper form" id="hero-form">
+                  <h3 class="form__title title-color">Залиште заявку і ми обовʼязково допоможемо Вам!</h3>
+                  <div class="form__items">
+                    <div class="form__group">
+                      <input type="text" name="name" maxlength="20" placeholder="Ім’я" id="name" class="form-name" required autocomplete="off">
+                    </div>
+                    <div class="form__group">
+                      <input type="email" name="email" maxlength="40" placeholder="Пошта" id="email" class="form-email" required>
                     </div>
                   </div>
-                  <div class="connection-form__items">
-                    <div class="connection-form__group">
-                      <input type="tel" name="phone" maxlength="16" placeholder="Номер телефону" id="connection-tel" class="connection-form-number" required>
+                  <div class="form__items">
+                    <div class="form__group">
+                      <input type="tel" name="phone" maxlength="16" placeholder="+ 38 (---)  --- -- --" id="tel" class="form-number" required>
                     </div>
                   </div>
-                  <div class="connection-form__items">
-                    <button class="connection-form__button-submit"  type="submit">Надіслати</button>
+                  <div class="form__items">
+                    <button class="form__button-submit" type="submit">Консультація</button>
                   </div>
-              </form>
+                </form>
+              </div>
               <div class="connection__image-box">
                 <img src="img/roundhouse.png" alt="house-in-a-round" class="connection__image">
               </div>

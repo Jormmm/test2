@@ -102,7 +102,7 @@ const mask2 = new IMask(phoneInput2, {
 // ВНИМАНИЕ! Это должен быть адрес ВАШЕГО РАЗВЕРНУТОГО ПРИЛОЖЕНИЯ
 // ТЕКУЩИЙ URL_APP приведён для примера
 const URL_APP =
-	'https://script.google.com/macros/s/AKfycbxVdz38mxZPoZikGur742JoPM8wGmXgMow1hVzn6jRfmRrxN_R1yrdHb2DhLRWSy3oHLQ/exec'
+	'https://script.google.com/macros/s/AKfycbyPQTBeb__8vGFnOYyMHg8j_21-jm0yKMY0eABfeWl-LyD0OBWDfYkqWk_2LLtCr5BMUQ/exec'
 
 // находим форму в документе
 const form = document.querySelector('#hero-form')
@@ -156,13 +156,13 @@ form.addEventListener('submit', async ev => {
 		headers: {
 			'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
 		},
-		//cors: "no-cors", <- это неправильно
-		mode: 'cors', //<- оставим по умолчанию
+		cors: "no-cors",
+		// mode: 'cors',
 		body: formBody,
 	})
 		.then(res => res.json())
 		.catch(err => alert('Ошибка!'))
-	// .then((res) => console.log(res));
+	.then((res) => console.log(res));
 
 	if (result.type === 'success') {
 		name.value = ''
