@@ -91,21 +91,23 @@ const mask = new IMask(phoneInput, {
     mask: "+{38}(000)0000000",
 });
 
-const phoneInput2 = document.querySelector('.connection-form-number')
+const phoneInput2 = document.querySelector('.form-number2')
 // const btn = document.querySelector('.form__button');
 
 const mask2 = new IMask(phoneInput2, {
     mask: "+{38}(000)0000000",
 });
 
+
+
 // в эту константу помещаем URL развёрнутого веб-приложения Google Apps Script
 // ВНИМАНИЕ! Это должен быть адрес ВАШЕГО РАЗВЕРНУТОГО ПРИЛОЖЕНИЯ
 // ТЕКУЩИЙ URL_APP приведён для примера
 const URL_APP =
-	'https://script.google.com/macros/s/AKfycbyPQTBeb__8vGFnOYyMHg8j_21-jm0yKMY0eABfeWl-LyD0OBWDfYkqWk_2LLtCr5BMUQ/exec'
+	'https://script.google.com/macros/s/AKfycbzzzfbqPye_5GVmiSmNM3dh1w1xvT4CyCoRRSITXp2af40Nx90fzNWUx47hdZ5zkE9_zw/exec'
 
 // находим форму в документе
-const form = document.querySelector('#hero-form')
+const form = document.querySelector('.form');
 
 // указываем адрес отправки формы (нужно только в начале примера)
 form.action = URL_APP
@@ -174,4 +176,6 @@ form.addEventListener('submit', async ev => {
 		alert(`Ошибка( ${result.errors}`)
 	}
 })
+
+
 
