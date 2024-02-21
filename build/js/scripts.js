@@ -91,12 +91,6 @@ const mask = new IMask(phoneInput, {
     mask: "+{38}(000)0000000",
 });
 
-const phoneInput2 = document.querySelector('.form-number2')
-// const btn = document.querySelector('.form__button');
-
-const mask2 = new IMask(phoneInput2, {
-    mask: "+{38}(000)0000000",
-});
 
 
 
