@@ -129,7 +129,7 @@ form.addEventListener('submit', async ev => {
 	let details = {
 		name: name.value.trim(),
 		email: email.value.trim(),
-		phone: phone.value.trim()
+		phone: phone.value.trim(),
 	}
 
 	// если поля не заполнены - прекращаем обработку
@@ -146,30 +146,26 @@ form.addEventListener('submit', async ev => {
 	// склеиваем параметры в одну строку
 	formBody = formBody.join('&')
 
-	// выполняем отправку данных в Google Apps
+	// виповнюємо відправку даних в Google Apps
 	const result = await fetch(URL_APP, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
 		},
 		cors: 'no-cors',
-		// mode: 'cors',
 		body: formBody,
 	})
 		.then(res => res.json())
-		.catch(err => alert('Ошибка!'))
-		.then(res => alert('Дякуємо! Невдовзі ми зателефонуємо вам!'));
-
-	if (result.type === 'success') {
-		name.value = ''
-		email.value = ''
-		phone.value = ''
-		alert('Дякуємо!')
-	}
-	if (result.type === 'error') {
-		alert(`Ошибка( ${result.errors}`)
-	}
+		.catch(err => alert('Помилка!'))
+		.then(res => {
+			alert('Дякуємо! Невдовзі ми зателефонуємо вам!')
+			// Очищаємо значення полів форми
+			name.value = ''
+			email.value = ''
+			phone.value = ''
+		})
 })
+
 
 
 
