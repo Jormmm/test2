@@ -152,13 +152,13 @@ form.addEventListener('submit', async ev => {
 		headers: {
 			'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
 		},
-		cors: "no-cors",
+		cors: 'no-cors',
 		// mode: 'cors',
 		body: formBody,
 	})
 		.then(res => res.json())
 		.catch(err => alert('Ошибка!'))
-	.then((res) => console.log(res));
+		.then(res => alert('Дякуємо! Невдовзі ми зателефонуємо вам!'));
 
 	if (result.type === 'success') {
 		name.value = ''
