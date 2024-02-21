@@ -101,7 +101,7 @@ const URL_APP =
 	'https://script.google.com/macros/s/AKfycbzzzfbqPye_5GVmiSmNM3dh1w1xvT4CyCoRRSITXp2af40Nx90fzNWUx47hdZ5zkE9_zw/exec'
 
 // находим форму в документе
-const form = document.querySelector('.form');
+const form = document.querySelector('#hero-form')
 
 // указываем адрес отправки формы (нужно только в начале примера)
 form.action = URL_APP
