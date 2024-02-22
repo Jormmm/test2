@@ -91,18 +91,21 @@ const mask = new IMask(phoneInput, {
     mask: "+{38}(000)0000000",
 });
 
-const phoneInput2 = document.querySelector('.connection-form-number')
+const phoneInput2 = document.querySelector('.number2')
 // const btn = document.querySelector('.form__button');
 
 const mask2 = new IMask(phoneInput2, {
     mask: "+{38}(000)0000000",
 });
 
+
+
+
 // в эту константу помещаем URL развёрнутого веб-приложения Google Apps Script
 // ВНИМАНИЕ! Это должен быть адрес ВАШЕГО РАЗВЕРНУТОГО ПРИЛОЖЕНИЯ
 // ТЕКУЩИЙ URL_APP приведён для примера
 const URL_APP =
-	'https://script.google.com/macros/s/AKfycbxVdz38mxZPoZikGur742JoPM8wGmXgMow1hVzn6jRfmRrxN_R1yrdHb2DhLRWSy3oHLQ/exec'
+	'https://script.google.com/macros/s/AKfycbzzzfbqPye_5GVmiSmNM3dh1w1xvT4CyCoRRSITXp2af40Nx90fzNWUx47hdZ5zkE9_zw/exec'
 
 // находим форму в документе
 const form = document.querySelector('#hero-form')
@@ -133,7 +136,7 @@ form.addEventListener('submit', async ev => {
 	let details = {
 		name: name.value.trim(),
 		email: email.value.trim(),
-		phone: phone.value.trim()
+		phone: phone.value.trim(),
 	}
 
 	// если поля не заполнены - прекращаем обработку
@@ -150,28 +153,83 @@ form.addEventListener('submit', async ev => {
 	// склеиваем параметры в одну строку
 	formBody = formBody.join('&')
 
-	// выполняем отправку данных в Google Apps
+	// виповнюємо відправку даних в Google Apps
 	const result = await fetch(URL_APP, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
 		},
-		cors: "no-cors",
-		// mode: 'cors',
+		cors: 'no-cors',
 		body: formBody,
 	})
 		.then(res => res.json())
-		.catch(err => alert('Ошибка!'))
-	.then((res) => console.log(res));
-
-	if (result.type === 'success') {
-		name.value = ''
-		email.value = ''
-		phone.value = ''
-		alert('Дякуємо!')
-	}
-	if (result.type === 'error') {
-		alert(`Ошибка( ${result.errors}`)
-	}
+		.catch(err => alert('Помилка!'))
+		.then(res => {
+			alert('Дякуємо! Невдовзі ми зателефонуємо вам!')
+			// Очищаємо значення полів форми
+			name.value = ''
+			email.value = ''
+			phone.value = ''
+		})
 })
+
+
+// находим вторую форму в документе
+const secondForm = document.querySelector('#second-form')
+// указываем адрес отправки второй формы
+secondForm.action = URL_APP
+
+// навешиваем обработчик на отправку второй формы
+secondForm.addEventListener('submit', async ev => {
+    // отменяем действие по умолчанию
+    ev.preventDefault()
+
+    // Получаем ссылки на элементы второй формы
+    const secondName = document.querySelector('[name=second-name]')
+    const secondEmail = document.querySelector('[name=second-email]')
+    const secondPhone = document.querySelector('[name=second-phone]')
+
+    // собираем данные из элементов второй формы
+    let secondDetails = {
+        name: secondName.value.trim(),
+        email: secondEmail.value.trim(),
+        phone: secondPhone.value.trim(),
+    }
+
+    // если поля не заполнены - прекращаем обработку
+    if (!isFilled(secondDetails)) return
+
+    // подготавливаем данные для отправки
+    let secondFormBody = []
+    for (let property in secondDetails) {
+        // кодируем названия и значения параметров
+        let encodedKey = encodeURIComponent(property)
+        let encodedValue = encodeURIComponent(secondDetails[property])
+        secondFormBody.push(encodedKey + '=' + encodedValue)
+    }
+    // склеиваем параметры в одну строку
+    secondFormBody = secondFormBody.join('&')
+
+    // выполняем отправку данных в Google Apps
+    const secondResult = await fetch(URL_APP, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+        },
+        cors: 'no-cors',
+        body: secondFormBody,
+    })
+        .then(res => res.json())
+        .catch(err => alert('Ошибка!'))
+        .then(res => {
+            alert('Спасибо! Мы скоро свяжемся с вами!')
+            // Очищаем значения полей второй формы
+            secondName.value = ''
+            secondEmail.value = ''
+            secondPhone.value = ''
+        })
+})
+
+
+
 
