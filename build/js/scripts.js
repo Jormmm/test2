@@ -171,8 +171,7 @@ form.addEventListener('submit', async ev => {
 		})
 		.then(res => {
 			const infoAlert = document.querySelector('.info-alert')
-			infoAlert.classList.add('alert')
-			infoAlert.textContent = 'Дякуємо! Невдовзі ми зателефонуємо вам!'
+			infoAlert.classList.add('block-alert')
 			// Очищаємо значення полів форми
 			name.value = ''
 			email.value = ''
@@ -219,24 +218,35 @@ secondForm.addEventListener('submit', async ev => {
 
     // выполняем отправку данных в Google Apps
     const secondResult = await fetch(URL_APP, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-        },
-        cors: 'no-cors',
-        body: secondFormBody,
-    })
-        .then(res => res.json())
-        .catch(err => alert('Ошибка!'))
-        .then(res => {
-            alert('Спасибо! Мы скоро свяжемся с вами!')
-            // Очищаем значения полей второй формы
-            secondName.value = ''
-            secondEmail.value = ''
-            secondPhone.value = ''
-        })
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+			},
+			cors: 'no-cors',
+			body: secondFormBody,
+		})
+			.then(res => res.json())
+			.catch(err => alert('Ошибка!'))
+			.then(res => {
+				const infoAlert = document.querySelector('.info-alert')
+				infoAlert.classList.add('block-alert')
+				// Очищаємо значення полів форми
+				secondName.value = ''
+				secondEmail.value = ''
+				secondPhone.value = ''
+			})
 })
 
+document.addEventListener('DOMContentLoaded', function () {
+	const infoButton = document.querySelector('.info-button')
+	const infoAlert = document.querySelector('.info-alert')
+
+	// Прикрепляем обработчик события клика на кнопку
+	infoButton.addEventListener('click', function () {
+		// Удаляем класс block-alert у элемента с классом info-alert
+		infoAlert.classList.remove('block-alert')
+	})
+})
 
 
 

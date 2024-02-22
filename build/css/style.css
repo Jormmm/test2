@@ -369,6 +369,7 @@ h1 {
 .form__title {
   font-size: 16px;
   font-weight: 500;
+  text-align: center;
   text-transform: uppercase;
   color: #EDE6E6;
 }
@@ -1251,6 +1252,9 @@ h1 {
 }
 
 .info-alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: fixed;
   width: 500px;
   height: 200px;
@@ -1263,9 +1267,6 @@ h1 {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1309,8 +1310,10 @@ h1 {
           transform: translateY(3px);
 }
 
-.alert {
-  display: contents;
+.block-alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 footer {
@@ -1922,7 +1925,7 @@ footer {
 
   .info-alert {
     width: 300px;
-    height: 200px;
+    height: 150px;
   }
 
   .info-title {
