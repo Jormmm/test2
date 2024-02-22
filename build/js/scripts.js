@@ -154,6 +154,7 @@ form.addEventListener('submit', async ev => {
 	formBody = formBody.join('&')
 
 	// виповнюємо відправку даних в Google Apps
+	// виповнюємо відправку даних в Google Apps
 	const result = await fetch(URL_APP, {
 		method: 'POST',
 		headers: {
@@ -163,9 +164,15 @@ form.addEventListener('submit', async ev => {
 		body: formBody,
 	})
 		.then(res => res.json())
-		.catch(err => alert('Помилка!'))
+		.catch(err => {
+			const infoAlert = document.querySelector('.info-alert')
+			infoAlert.classList.add('alert')
+			infoAlert.textContent = 'Помилка!'
+		})
 		.then(res => {
-			alert('Дякуємо! Невдовзі ми зателефонуємо вам!')
+			const infoAlert = document.querySelector('.info-alert')
+			infoAlert.classList.add('alert')
+			infoAlert.textContent = 'Дякуємо! Невдовзі ми зателефонуємо вам!'
 			// Очищаємо значення полів форми
 			name.value = ''
 			email.value = ''

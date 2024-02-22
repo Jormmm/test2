@@ -349,6 +349,10 @@ h1 {
       align-self: flex-start;
 }
 
+.green-text {
+  color: #5aa102;
+}
+
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -385,7 +389,7 @@ h1 {
   -webkit-box-shadow: 0px 4px 13.6000003815px 0px #00000040;
           box-shadow: 0px 4px 13.6000003815px 0px #00000040;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   background: #555B69;
   color: #EDE6E6;
@@ -413,7 +417,7 @@ h1 {
   text-transform: uppercase;
   padding: 0 0 0 14px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   -webkit-box-shadow: 0px 4px 13.6000003815px 0px #00000040;
           box-shadow: 0px 4px 13.6000003815px 0px #00000040;
 }
@@ -820,6 +824,28 @@ h1 {
   font-size: 75px;
 }
 
+.buildings {
+  background: #21232fcf;
+}
+
+.build__title {
+  text-align: center;
+  padding: 20px 0 0px 0;
+  color: #EEE;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.build__time {
+  text-align: center;
+  padding: 0px 0 20px 0;
+  color: #EEE;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 .tabs {
   padding: 21px 20px;
 }
@@ -1068,6 +1094,10 @@ h1 {
   }
 }
 
+.button-color {
+  background-color: #1C90F5;
+}
+
 .map {
   padding: 47px 0;
 }
@@ -1220,6 +1250,69 @@ h1 {
           justify-content: center;
 }
 
+.info-alert {
+  position: fixed;
+  width: 500px;
+  height: 200px;
+  background-color: #555B69;
+  border-radius: 33px;
+  border: 1px solid #EEE;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s ease 0s;
+  -o-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
+  display: none;
+}
+
+.info-title {
+  text-align: center;
+  color: #EEE;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.info-button {
+  background-color: #1C90F5;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #EEE;
+  line-height: 30px;
+}
+
+.info-button:hover {
+  background-color: #1c90f5c0;
+}
+
+.info-button:active {
+  -webkit-transform: translateY(3px);
+      -ms-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.alert {
+  display: contents;
+}
+
 footer {
   background-color: #21232F;
 }
@@ -1266,10 +1359,6 @@ footer {
 @media (min-width: 1439.98px) {
   .notion {
     background: url(../img/background-absolute.png) center -100px/auto 100% no-repeat;
-  }
-
-  .buildings {
-    background: #21232fcf;
   }
 
   .connection__image-box {
@@ -1549,7 +1638,7 @@ footer {
 
   .form__button-submit {
     width: 330px;
-    font-size: 10px;
+    font-size: 14px;
     height: 39px;
     font-weight: 600;
   }
@@ -1565,7 +1654,7 @@ footer {
 
   .form__button-download {
     width: 330px;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 600;
     height: 39px;
   }
@@ -1721,8 +1810,12 @@ footer {
             flex-direction: row;
   }
 
-  .tabs {
-    background: #21232fcf;
+  .build__title {
+    font-size: 16px;
+  }
+
+  .build__time {
+    font-size: 16px;
   }
 
   .tabs {
@@ -1825,6 +1918,15 @@ footer {
     -webkit-transform: translatex(-50%);
         -ms-transform: translatex(-50%);
             transform: translatex(-50%);
+  }
+
+  .info-alert {
+    width: 300px;
+    height: 200px;
+  }
+
+  .info-title {
+    font-size: 16px;
   }
 }
 
@@ -2113,6 +2215,14 @@ footer {
   .form-number::placeholder {
     max-width: 270px;
   }
+
+  .build__title {
+    font-size: 14px;
+  }
+
+  .build__time {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 374.98px) {
@@ -2145,5 +2255,11 @@ footer {
   .value-items {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 330px) {
+  .form {
+    max-width: 290px;
   }
 }
