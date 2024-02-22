@@ -91,14 +91,18 @@ const mask = new IMask(phoneInput, {
     mask: "+{38}(000)0000000",
 });
 
+const phoneInput2 = document.querySelector('.connection-form-number')
+// const btn = document.querySelector('.form__button');
 
-
+const mask2 = new IMask(phoneInput2, {
+    mask: "+{38}(000)0000000",
+});
 
 // в эту константу помещаем URL развёрнутого веб-приложения Google Apps Script
 // ВНИМАНИЕ! Это должен быть адрес ВАШЕГО РАЗВЕРНУТОГО ПРИЛОЖЕНИЯ
 // ТЕКУЩИЙ URL_APP приведён для примера
 const URL_APP =
-	'https://script.google.com/macros/s/AKfycbzzzfbqPye_5GVmiSmNM3dh1w1xvT4CyCoRRSITXp2af40Nx90fzNWUx47hdZ5zkE9_zw/exec'
+	'https://script.google.com/macros/s/AKfycbxVdz38mxZPoZikGur742JoPM8wGmXgMow1hVzn6jRfmRrxN_R1yrdHb2DhLRWSy3oHLQ/exec'
 
 // находим форму в документе
 const form = document.querySelector('#hero-form')
@@ -129,7 +133,7 @@ form.addEventListener('submit', async ev => {
 	let details = {
 		name: name.value.trim(),
 		email: email.value.trim(),
-		phone: phone.value.trim(),
+		phone: phone.value.trim()
 	}
 
 	// если поля не заполнены - прекращаем обработку
@@ -146,26 +150,28 @@ form.addEventListener('submit', async ev => {
 	// склеиваем параметры в одну строку
 	formBody = formBody.join('&')
 
-	// виповнюємо відправку даних в Google Apps
+	// выполняем отправку данных в Google Apps
 	const result = await fetch(URL_APP, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
 		},
-		cors: 'no-cors',
+		cors: "no-cors",
+		// mode: 'cors',
 		body: formBody,
 	})
 		.then(res => res.json())
-		.catch(err => alert('Помилка!'))
-		.then(res => {
-			alert('Дякуємо! Невдовзі ми зателефонуємо вам!')
-			// Очищаємо значення полів форми
-			name.value = ''
-			email.value = ''
-			phone.value = ''
-		})
+		.catch(err => alert('Ошибка!'))
+	.then((res) => console.log(res));
+
+	if (result.type === 'success') {
+		name.value = ''
+		email.value = ''
+		phone.value = ''
+		alert('Дякуємо!')
+	}
+	if (result.type === 'error') {
+		alert(`Ошибка( ${result.errors}`)
+	}
 })
-
-
-
 
